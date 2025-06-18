@@ -102,28 +102,38 @@ body {
 /* ===== CARRUSEL MODIFICADO ===== */
 #galeria {
     padding: 80px 0;
-    position: right;
-    /* Degradado que comienza a 70% del ancho y se intensifica al 100% */
-    background: linear-gradient(to right, 
-        #ffffff 5%, 
-        var(--dorado) 100%
-    );
+    position: relative;
+    /* Fondo por defecto para móviles */
+    background: var(--dorado);
+}
+
+@media (min-width: 768px) {
+    #galeria {
+        /* Fondo para desktop */
+        background: linear-gradient(
+            to right,
+            #ffffff 0%,
+            #ffffff 30%,
+            var(--dorado) 70%,
+            var(--dorado) 100%
+        );
+    }
 }
 
 .carousel-container {
     position: relative;
-    z-index: 2; /* Capa superior */
+    z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Padding para móviles */
+    padding: 0 15px;
 }
 
 .carousel-inner {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
-    background-color: white; /* Fondo blanco sólido */
-    border: 1px solid rgba(0,0,0,0.05); /* Borde sutil */
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .carousel-item img {
@@ -131,6 +141,12 @@ body {
     object-fit: cover;
     object-position: center;
     transition: transform 0.5s ease;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 350px; /* Ajuste para móviles */
+    }
 }
 
 .carousel-item:hover img {
@@ -146,7 +162,7 @@ body {
     transform: translateX(-50%);
     width: auto;
     max-width: 80%;
-    backdrop-filter: blur(2px); /* Efecto vidrio */
+    backdrop-filter: blur(2px);
 }
 
 .carousel-indicators {

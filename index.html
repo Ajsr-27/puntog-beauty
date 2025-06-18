@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punto G Beauty - Estética Profesional</title>
+    <title>Punto G Beauty | Especialistas en Cejas y Pestañas - Monte Grande</title>
+    <meta name="description" content="Salón de belleza profesional en Monte Grande. Laminado de cejas, lifting de pestañas y tratamientos con henna. Reserva online con resultados naturales y duraderos.">
+    <meta name="keywords" content="cejas Monte Grande, laminado de cejas, lifting pestañas, henna cejas, belleza profesional, tratamientos estéticos">
+    <meta name="author" content="Punto G Beauty">
+    <!-- Open Graph / Redes Sociales -->
+<meta property="og:title" content="Punto G Beauty | Estética Profesional en Monte Grande">
+<meta property="og:description" content="Realzá tu belleza con diseño de cejas, lifting de pestañas y más. ¡Reservá tu turno online!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ajsr-27.github.io/puntog-beauty/">
+<meta property="og:image" content="https://ajsr-27.github.io/puntog-beauty/img/og-image.png">
+<meta property="og:locale" content="es_AR">
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -117,12 +127,12 @@
                                         <label for="servicio" class="form-label">Servicio</label>
                                         <select class="form-select" id="servicio" required>
                                             <option value="">Seleccione un servicio</option>
-                                            <option value="Laminado de Cejas">Aplicacion de Henna ($4.000)</option>
+                                            <option value="Laminado de Cejas">Laminado de Cejas Sunset ($17.000)</option>
                                             <option value="Lifting de Pestañas">Perfilado Clasico ($8.000)</option>
                                             <option value="Limpieza de Cejas">Perfilado con Nutricion ($12.500)</option>
                                             <option value="Lifting Glow Up">Perfilado con Henna + Nutricion ($15.000)</option>
                                             <option value="Hidratación con Botox">Lifting de Pestañas Glow Up ($17.000)</option>
-                                            <option value="Laminado de Cejas">Laminado de Cejas Sunset ($17.000)</option>
+                                            <option value="Laminado de Cejas">Aplicacion de Henna ($4.000)</option>
                                         </select>
                                     </div>
                                     <div class="col-12 text-center mt-4">
@@ -150,9 +160,9 @@
                 <div class="card service-card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-solid fa-spray-can fa-3x mb-3 text-primary"></i>
-                        <h3 class="h5">Aplicación de Henna</h3>
-                        <p class="mb-3">Coloración semipermanente que define y rellena tus cejas con un acabado natural y duradero.</p>
-                        <span class="badge bg-primary rounded-pill px-3">$4.000</span>
+                        <h3 class="h5">Laminado de Cejas Sunset</h3>
+                        <p class="mb-3">Peinado y fijación de cejas con perfilado, nutrición y cepillo. Ideal para un efecto ordenado y natural.</p>
+                        <span class="badge bg-primary rounded-pill px-3">$17.000</span>
                     </div>
                 </div>
             </div>
@@ -210,9 +220,9 @@
                 <div class="card service-card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
-                        <h3 class="h5">Laminado de Cejas Sunset</h3>
-                        <p class="mb-3">Peinado y fijación de cejas con perfilado, nutrición y cepillo. Ideal para un efecto ordenado y natural.</p>
-                        <span class="badge bg-primary rounded-pill px-3">$17.000</span>
+                        <h3 class="h5">Aplicación de Henna</h3>
+                        <p class="mb-3">Coloración semipermanente que define y rellena tus cejas con un acabado natural y duradero.</p>
+                        <span class="badge bg-primary rounded-pill px-3">$4.000</span>
                     </div>
                 </div>
             </div>
@@ -330,30 +340,5 @@
     <!-- Script personalizado -->
     <script src="js/main.js"></script>
     
-    <script>
-        // Script para mostrar/ocultar formulario
-        document.getElementById('btn-abrir-formulario').addEventListener('click', function() {
-            const formulario = document.getElementById('formulario-reservas');
-            formulario.style.display = 'block';
-            formulario.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Script para enviar el formulario a WhatsApp
-        document.getElementById('form-reserva').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const telefono = '5491126302195';
-            const formData = new FormData(this);
-            let mensaje = `📅 Nueva Reserva Punto G Beauty\n\n`;
-            
-            for (let [key, value] of formData.entries()) {
-                mensaje += `${key}: ${value}\n`;
-            }
-            
-            window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
-            alert('✔️ Reserva enviada. Te contactaremos para confirmar.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
